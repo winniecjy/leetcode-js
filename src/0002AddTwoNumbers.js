@@ -81,7 +81,7 @@ var addTwoNumbersTry1 = function(l1, l2) {
  * @param {ListNode} l2
  * @return {ListNode}
  */
-var addTwoNumbersBetter = function(l1, l2) {
+var addTwoNumbersVoted = function(l1, l2) {
   let res = new ListNode(0);
   let sum = 0;
   let prevNode = res;
