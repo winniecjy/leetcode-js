@@ -25,14 +25,14 @@ var lengthOfLongestSubstringNormal = function(s) {
 };
 
 /**
- * 优化思路：优化起始位置的选择
+ * 优化思路1：优化起始位置的选择
  * @param {string} s
  * @return {number}
  */
-var lengthOfLongestSubstringBetter = function(s) {
+var lengthOfLongestSubstringBetter1 = function(s) {
   function recursion(str, st) {
     let map = new Map();
-    if(st>=str.length) return 1;
+    if(st>=str.length) return 0;
     for (let i=st; i<str.length; i++) {
       if (map.has(str[i])) {
         let lastIndex = map.get(str[i]);
@@ -46,4 +46,53 @@ var lengthOfLongestSubstringBetter = function(s) {
     return str.length-st;
   }
   return recursion(s, 0);
+};
+
+/**
+ * 优化思路2：优化起始位置选择后，遍历位置
+ * @param {string} s
+ * @return {number}
+ */
+var lengthOfLongestSubstringBetter2 = function(s) {
+  function recursion(str, st, prefix, map) {
+    if(st>=str.length) return prefix;
+    for (let i=st; i<str.length; i++) {
+      if (map.has(str[i])) {
+        let lastIndex = map.get(str[i]);
+        let newMap = new Map();
+        for(let j=lastIndex+1; j<=i; j++) {
+          newMap.set(str[j], j);
+        }
+        let another = recursion(str, i+1, i-lastIndex, newMap);
+        return another>i-st+prefix?another:i-st+prefix;
+      } else {
+        map.set(str[i], i);
+      }
+    }
+    return str.length-st;
+  }
+  return recursion(s, 0, 0, new Map());
+};
+
+/**
+ * 高票思路
+ * https://leetcode.com/problems/longest-substring-without-repeating-characters/discuss/1729/11-line-simple-Java-solution-O(n)-with-explanation
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number[]}
+ */
+const lengthOfLongestSubstringVoted = function(s) {
+  let map = new Map();
+  let pA = 0;
+  let pB = 0;
+  let max = 0;
+  for (; pB<s.length; pB++) {
+    if (map.has(s[pB])) {
+      max = max<(pB-pA)?(pB-pA):max;
+      pA = map.get(s[pB])+1;
+      map.set(s[pB], pB);
+    }
+    max = max<(pB-pA)?(pB-pA):max;
+  }
+  return max;
 };
