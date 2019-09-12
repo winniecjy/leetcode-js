@@ -13,20 +13,15 @@
     Output: "bb"
     ```
 - **思路**   
-归并排序的思路，排序后的数组取中位数。      
-Runtime: 556 ms, faster than 7.67% of JavaScript online submissions for Longest Substring Without Repeating Characters.   
-Memory Usage: 86.8 MB, less than 5.31% of JavaScript online submissions for Longest Substring Without Repeating Characters.       
+双指针法，回文字符串的特点在于从中间展开，左右字符是对称的。当回文字符串长度为奇数时，其中心为一个元素，即`bab`，当回文字符串长度为偶数时，其中心为两个一致的元素，则`aa`。针对这两种形式，可以通过双指针法遍历两次，得出结果；第一次双指针初始下标分别为0/1，第二次双指针初始下标分别为0/2，双指针同时向右移动，当双指针数值相同时，则到达了回文字符的中心。再向两侧扩展，得到回文字符的长度。         
+Runtime: 140 ms, faster than 49.29% of JavaScript online submissions for Longest Palindromic Substring.   
+Memory Usage: 42 MB, less than 26.09% of JavaScript online submissions for Longest Palindromic Substring.       
 - **优化思路**   
-双指针？   
-Runtime: 440 ms, faster than 13.97% of JavaScript online submissions for Longest Substring Without Repeating Characters.   
-Memory Usage: 171.8 MB, less than 5.31% of JavaScript online submissions for Longest Substring Without Repeating Characters.    
-2. 在优化1的基础上，可知上次重复字符的下一位到当前字符之间无重复，可以直接从当前字符的下一位开始查询，举个例子，同样对于`abcabcbb`，当从第1位开始遍历时，实际已知第1位到第3位之间无重复，所以可以直接从第4位开始判断。   
-Runtime: 380 ms, faster than 16.33% of JavaScript online submissions for Longest Substring Without Repeating Characters.   
-Memory Usage: 172.8 MB, less than 5.31% of JavaScript online submissions for Longest Substring Without Repeating Characters.   
-优化效果不理想，应该是换一个思路的做法。   
+考虑是否可以将两个情况合二为一，当b和a之间距离小于等于1时，b向右走，a不动，否则a向右走，b不动。代码量优化了，但是性能没有什么差别。    
+Runtime: 140 ms, faster than 49.29% of JavaScript online submissions for Longest Palindromic Substring.
+Memory Usage: 42.1 MB, less than 23.91% of JavaScript online submissions for Longest Palindromic Substring.   
 - **高票答案对比**   
-最高票：https://leetcode.com/problems/longest-substring-without-repeating-characters/discuss/1729/11-line-simple-Java-solution-O(n)-with-explanation    
-大体思路是差不多的，但是作者使用了双指针法，两个指针初始位于0位置，指针A保持不动，指针B向后移动，并通过map记录已经出现的字符及其下标，当指针B遇到已经出现的字符C时，比较当前指针A和指针B之间的距离与最大距离，记录较大者，然后将指针A移动到字符C上次出现位置的下一位，并重复上述过程。   
-这种实现方法只需要遍历一次数组即可，复杂度O(n)。   
-Runtime: 72 ms, faster than 98.38% of JavaScript online submissions for Longest Substring Without Repeating Characters.    
-Memory Usage: 37.6 MB, less than 96.46% of JavaScript online submissions for Longest Substring Without Repeating Characters.   
+最高票：https://leetcode.com/problems/longest-palindromic-substring/discuss/2928/Very-simple-clean-java-solution       
+思路比较一致，但是减少了一些判断和变量，通过一个下标i，i+1和i+2分别指示偶数长度回文串和奇数长度回文串。另外回文串扩展完成后再生成字符串，而不是一边判断一边修改回文串。  
+Runtime: 72 ms, faster than 93.37% of JavaScript online submissions for Longest Palindromic Substring.   
+Memory Usage: 36.2 MB, less than 65.22% of JavaScript online submissions for Longest Palindromic Substring.   
