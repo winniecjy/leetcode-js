@@ -48,15 +48,18 @@ var isMatchNormal = function(s, p) {
  * @return {boolean}
  */
 var isMatchBetter = function(s, p) {
-  let dp = new Array(s.length).fill([]);
+  let dp = [];
+  for (let i=0; i<s.length+1; i++) {
+    dp.push(new Array(p.length+1).fill(false));
+  }
    // dp[s.length+1][p.length+1], dp[i][j]表示s[0,i-1]在正则p[0, j-1]下是否匹配
   dp[0][0] = true;
   // 初始化状态，
   // dp[0][j]表示字符串为''，正则为p.substr(0, j)时是否匹配，对于空字符串匹配的格式为#*#*#*...
   // dp[i][0]表示字符串为s.substr(0,i)，正则为''时是否匹配，可知都不匹配
-  for (let j=2; j<p.length+1; j++) {
-    if (p[j]==='*' && dp[0][j-2]) {
-      dp[0][j] = true;
+  for (let j=2; j<=p.length; j++) {
+    if (p[j-1]==='*' && dp[0][j-2]) {
+      dp[0][j+1] = true;
     }
   }
 
@@ -73,10 +76,10 @@ var isMatchBetter = function(s, p) {
   for(let i=0; i<s.length; i++) {
     for (let j=0; j<p.length; j++) {
       if (p[j] === '.' || p[j] === s[i]) {
-        dp[i+1][j+1] = dp[i-1][j-1];
+        dp[i+1][j+1] = dp[i][j]===true;
       } else if (p[j] === '*'){
         if (p[j-1] !== '.' && p[j-1] !== s[i]) {
-          dp[i+1][j+1] = dp[i+1][j-1];
+          dp[i+1][j+1] = dp[i+1][j-1]===true;
         } else {
           dp[i+1][j+1] = dp[i+1][j-1] || dp[i+1][j] || dp[i][j+1];
         }
