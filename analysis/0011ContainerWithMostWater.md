@@ -9,11 +9,13 @@
     // 蓝色区域代表装水区域，容量为49
     ```
 - **思路**   
-第一思路是递归，对于匹配规则p，遇到*的情况处理，遇到.的情况处理，其他按照正常匹配，超时了。   
+以每根柱子为起点，计算到其后的柱子的面积，取最大值，复杂度O(n^2)。    
+Runtime: 824 ms, faster than 10.95% of JavaScript online submissions for Container With Most Water.
+Memory Usage: 35.7 MB, less than 39.39% of JavaScript online submissions for Container With Most Water.
 - **优化思路**   
-想不出来。偷偷看👀了眼答案标题，看到了动态规划，手表示了解了，脑子想了半个小时表示没有，所以我直接看答案了。      
+又想不出来，我要头秃了。      
 - **高票答案对比**   
-最高票：https://leetcode.com/problems/regular-expression-matching/discuss/5651/Easy-DP-Java-Solution-with-detailed-Explanation 
+最高票：https://leetcode.com/problems/container-with-most-water/discuss/6099/Yet-another-way-to-see-what-happens-in-the-O(n)-algorithm
 Runtime: 68 ms, faster than 87.81% of JavaScript online submissions for Regular Expression Matching.   
 Memory Usage: 36.4 MB, less than 76.47% of JavaScript online submissions for Regular Expression Matching.   
 动态规划的思想是分阶段求解决方案的策略，动态规划解决的问题多数有重叠子问题这个特点，为减少重复计算，对每一个子问题只解一次，将其不同阶段的不同状态保存在一个二维数组中。动态规划的当前阶段最佳决策与上一阶段相关。太久没有搞算法，动态规划真的很苦手，只能对着代码一步一步的写注释，慢慢消化ing。   
