@@ -59,7 +59,7 @@ var isMatchBetter = function(s, p) {
   // dp[i][0]表示字符串为s.substr(0,i)，正则为''时是否匹配，可知都不匹配
   for (let j=2; j<=p.length; j++) {
     if (p[j-1]==='*' && dp[0][j-2]) {
-      dp[0][j+1] = true;
+      dp[0][j] = true;
     }
   }
 
