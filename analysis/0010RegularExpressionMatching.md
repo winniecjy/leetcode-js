@@ -40,6 +40,6 @@
 想不出来。偷偷看👀了眼答案标题，看到了动态规划，手表示了解了，脑子想了半个小时表示没有，所以我直接看答案了。      
 - **高票答案对比**   
 最高票：https://leetcode.com/problems/regular-expression-matching/discuss/5651/Easy-DP-Java-Solution-with-detailed-Explanation 
-Runtime: 192 ms, faster than 67.76% of JavaScript online submissions for Palindrome Number.   
-Memory Usage: 44.8 MB, less than 98.28% of JavaScript online submissions for Palindrome Number.   
-这个答案是将数字翻转比较两个数字是否相等，这样的空间复杂度更优，时间复杂度稍差，实际上如果只是回文正整数那这个方案是更加合理的，因为在大部分的语言中都有数字溢出的概念，比如作者使用的Java，对于32位整数来说，数字的位数不会超过10位，所以减少的时间复杂度不值一提。作者提出的数字翻转溢出的情况实际上是不需要考虑的，假如翻转溢出了，那么说明这个数字不可能是回文数字（如果是，那么表示x也是溢出的）。另外给出一定不会是回文字符的数字判断`x < 0 || (x != 0 && x%10 === 0)`。     
+Runtime: 68 ms, faster than 87.81% of JavaScript online submissions for Regular Expression Matching.   
+Memory Usage: 36.4 MB, less than 76.47% of JavaScript online submissions for Regular Expression Matching.   
+动态规划的思想是分阶段求解决方案的策略，动态规划解决的问题多数有重叠子问题这个特点，为减少重复计算，对每一个子问题只解一次，将其不同阶段的不同状态保存在一个二维数组中。动态规划的当前阶段最佳决策与上一阶段相关。个人对于动态规划真的很苦手，只能对着代码一步一步的写注释，慢慢消化ing。   
