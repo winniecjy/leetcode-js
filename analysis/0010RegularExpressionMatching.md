@@ -42,4 +42,5 @@
 最高票：https://leetcode.com/problems/regular-expression-matching/discuss/5651/Easy-DP-Java-Solution-with-detailed-Explanation 
 Runtime: 68 ms, faster than 87.81% of JavaScript online submissions for Regular Expression Matching.   
 Memory Usage: 36.4 MB, less than 76.47% of JavaScript online submissions for Regular Expression Matching.   
-动态规划的思想是分阶段求解决方案的策略，动态规划解决的问题多数有重叠子问题这个特点，为减少重复计算，对每一个子问题只解一次，将其不同阶段的不同状态保存在一个二维数组中。动态规划的当前阶段最佳决策与上一阶段相关。个人对于动态规划真的很苦手，只能对着代码一步一步的写注释，慢慢消化ing。   
+动态规划的思想是分阶段求解决方案的策略，动态规划解决的问题多数有重叠子问题这个特点，为减少重复计算，对每一个子问题只解一次，将其不同阶段的不同状态保存在一个二维数组中。动态规划的当前阶段最佳决策与上一阶段相关。太久没有搞算法，动态规划真的很苦手，只能对着代码一步一步的写注释，慢慢消化ing。   
+![代码注释](https://img14.360buyimg.com/imagetools/jfs/t1/57065/30/11076/181656/5d8196a5E4ca20d1a/922d3d9fbc023138.png)
