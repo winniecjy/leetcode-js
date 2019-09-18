@@ -18,3 +18,23 @@ var maxAreaNormal = function(height) {
   }
   return max;
 };
+
+/**
+ * 高票思路
+ * @param {number[]} height
+ * @return {number}
+ */
+var maxAreaVoted = function(height) {
+  let max = 0;
+  let ll = 0, rr = height.length-1;
+  while(ll > rr) {
+    let minHeight = height[ll] > height[rr] ? height[rr] : height[ll];
+    max = max > (minHeight * (rr-ll)) ? max : (minHeight * (rr-ll));
+    if (height[ll] > height[rr]) {
+      rr--;
+    } else {
+      ll--;
+    }
+  }
+  return max;
+};

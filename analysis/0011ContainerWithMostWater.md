@@ -10,13 +10,13 @@
     ```
 - **思路**   
 以每根柱子为起点，计算到其后的柱子的面积，取最大值，复杂度O(n^2)。    
-Runtime: 824 ms, faster than 10.95% of JavaScript online submissions for Container With Most Water.
-Memory Usage: 35.7 MB, less than 39.39% of JavaScript online submissions for Container With Most Water.
+Runtime: 824 ms, faster than 10.95% of JavaScript online submissions for Container With Most Water.   
+Memory Usage: 35.7 MB, less than 39.39% of JavaScript online submissions for Container With Most Water.   
 - **优化思路**   
 又想不出来，我要头秃了。      
 - **高票答案对比**   
-最高票：https://leetcode.com/problems/container-with-most-water/discuss/6099/Yet-another-way-to-see-what-happens-in-the-O(n)-algorithm
-Runtime: 68 ms, faster than 87.81% of JavaScript online submissions for Regular Expression Matching.   
-Memory Usage: 36.4 MB, less than 76.47% of JavaScript online submissions for Regular Expression Matching.   
-动态规划的思想是分阶段求解决方案的策略，动态规划解决的问题多数有重叠子问题这个特点，为减少重复计算，对每一个子问题只解一次，将其不同阶段的不同状态保存在一个二维数组中。动态规划的当前阶段最佳决策与上一阶段相关。太久没有搞算法，动态规划真的很苦手，只能对着代码一步一步的写注释，慢慢消化ing。   
-![代码注释](https://img14.360buyimg.com/imagetools/jfs/t1/57065/30/11076/181656/5d8196a5E4ca20d1a/922d3d9fbc023138.png)
+最高票：https://leetcode.com/problems/container-with-most-water/discuss/6099/Yet-another-way-to-see-what-happens-in-the-O(n)-algorithm   
+Runtime: 56 ms, faster than 86.89% of JavaScript online submissions for Container With Most Water.   
+Memory Usage: 35.5 MB, less than 66.67% of JavaScript online submissions for Container With Most Water.    
+用两个指针分别指示容器的左右边界，左指针初始位于最左，右指针初始位于最右。比较当前容器大小与历史记录的大小，更新最大值。指针中的高度较小者向中间靠拢，计算最大值并更新，以此循环更新，直到左指针的位置>=右指针的位置，复杂度为O(n)。   
+对于指针移动的简单理解：初始时两个指针间间距是最大的，当移动时，间距减小，那么容器容量大于当前值，只可能出现在高度高于当前容器的情况。由于容器的高度取决于高度较小者，当移动较大者时，容器高度只可能小于或等于当前容器高度，所以可以排除，移动高度较小者，假如下一柱体高度大于当前较小者，那么容器容量可能大于当前。   
