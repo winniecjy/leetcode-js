@@ -19,7 +19,7 @@ Memory Usage: 34.9 MB, less than 59.38% of JavaScript online submissions for Lon
 无。   
 
 - **高票答案对比**   
-最高票：https://leetcode.com/problems/roman-to-integer/discuss/6529/My-solution-for-this-question-but-I-don't-know-is-there-any-easier-way   
-Runtime: 140 ms, faster than 74.62% of JavaScript online submissions for Roman to Integer.   
-Memory Usage: 39.7 MB, less than 61.70% of JavaScript online submissions for Roman to Integer.   
-基本一致，但是减少了判断，作者从末尾开始判断，当遇到1/10/100的时候，判断当前结果是否已经大于等于5/50/500，如果是则需要-1/-10/-100，否则+1/+10/+100。   
+最高票：https://leetcode.com/problems/longest-common-prefix/discuss/6910/Java-code-with-13-lines
+Runtime: 52 ms, faster than 92.67% of JavaScript online submissions for Longest Common Prefix.   
+Memory Usage: 33.8 MB, less than 84.38% of JavaScript online submissions for Longest Common Prefix.   
+用第一个字符串作为初始值，其他字符串中计算是否存在对应的子串从0开始，即`strs[i].indexOf(pre) === 0`。   

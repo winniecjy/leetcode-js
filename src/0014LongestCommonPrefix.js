@@ -31,20 +31,14 @@ var longestCommonNormal = function(strs) {
  * @param {string[]} strs
  * @return {string}
  */
-var longestCommonBetter = function(strs) {
-  if (strs.length === 0) return '';
+var longestCommonVoted = function(strs) {
+  if (strs === null || strs.length === 0) return '';
   let ret  = strs[0];
   for (let i=1; i<strs.length; i++) {
-    if (ret.length > strs[i].length) {
-      ret = ret.substr(0, strs[i].length);
+    while (strs[i].indexOf(ret) !== 0) {
+      ret = ret.substr(0, ret.length-1);
     }
-    for (let j=0; j<strs[i].length; j++) {
-      if (strs[i][j] !== ret[j]) {
-        ret = ret.substr(0, j);
-        break;
-      }
-    }
-    if (ret === '') return '';
+    if (ret === '') break;
   }
   
   return ret;
