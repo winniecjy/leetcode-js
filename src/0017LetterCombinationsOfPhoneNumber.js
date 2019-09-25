@@ -34,7 +34,7 @@ var letterCombinationsNormal = function(digits) {
  * @param {string} digits
  * @return {string[]}
  */
-var letterCombinationsNormal = function(digits) {
+var letterCombinationsBetter = function(digits) {
   let map = {
     2: ['a', 'b', 'c'],
     3: ['d', 'e', 'f'],
@@ -58,4 +58,74 @@ var letterCombinationsNormal = function(digits) {
   }
   
   return ret;
+};
+
+/**
+ * 高票思路
+ * @param {string} digits
+ * @return {string[]}
+ */
+var letterCombinationsVoted = function(digits) {
+  if (digits.length === 0) return [];
+  let map = ['0', '1', 'abc', 'def', 'ghi', 'jkl', 'mno', 'pqrs', 'tuv', 'wxyz'];
+  function Queue() {
+    let arr = [];
+    let add = (str) => {
+      arr.push(str);
+    }
+    let pop = () => {
+      if (arr.length === 0) return null;
+      let temp = arr[0];
+      arr = arr.slice(1);
+      return temp;
+    }
+    let front = () => {
+      if (arr.length === 0) return null;
+      return arr[0];
+    }
+    let getArr = () => {
+      return arr;
+    }
+
+    return {
+      add,
+      front,
+      pop,
+      getArr,
+    }
+  }
+  let q = new Queue();
+  q.add('');
+  while(q.front().length !== digits.length) {
+    let front = q.pop();
+    let digit = digits[front.length];
+    for (let i=0; i<map[digit].length; i++) {
+      q.add(front+map[digit][i]);
+    }
+  }
+
+  return q.getArr();
+};
+
+/**
+ * js高票思路
+ * @param {string} digits
+ * @return {string[]}
+ */
+var letterCombinationsVotedJS = function(digits) {
+  if (digits.length === 0) return [];
+  let map = ['0', '1', 'abc', 'def', 'ghi', 'jkl', 'mno', 'pqrs', 'tuv', 'wxyz'];
+  let mapped = [];
+  for (let i=0; i<digits.length; i++) {
+    mapped.push(map[digits[i]].split(''));
+  }
+  return mapped.reduce((prev, curr, index) => {
+    let arr = [];
+    prev.forEach((e) => {
+      curr.forEach((v) => {
+        arr.push(e+v); 
+      })
+    })
+    return arr;
+  })
 };
