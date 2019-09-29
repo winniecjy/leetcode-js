@@ -1,4 +1,4 @@
-## 题解：[20190928]#0019 Remove Nth Node From End of List
+## 题解：[20190929]#0019 Remove Nth Node From End of List
 - **题干**  
 给出一个链表，移除倒数第N个节点，返回结果链表的头节点。 
     示例：   
