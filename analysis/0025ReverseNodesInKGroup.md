@@ -19,23 +19,39 @@ k 是一个正整数，它的值小于或等于链表的长度。
   - 节点c的next指向节点b，此时链表为a<-b<-c d，a/b/c翻转完成
   - 重复...   
 
-Runtime: 172 ms, faster than 5.44% of JavaScript online submissions for Reverse Nodes in k-Group.   
-Memory Usage: 45.2 MB, less than 100.00% of JavaScript online submissions for Reverse Nodes in k-Group.   
+  Runtime: 172 ms, faster than 5.44% of JavaScript online submissions for Reverse Nodes in k-Group.   
+  Memory Usage: 45.2 MB, less than 100.00% of JavaScript online submissions for Reverse Nodes in k-Group.   
 
 - **优化思路**   
-时间复杂度较高 
+时间复杂度较高，考虑到递归的过程中都首先对链表长度进行了判断，实际上可以整合在翻转过程中，时间复杂度上就降低了一半，由O(2n)降为O(n)。   
+Runtime: 72 ms, faster than 84.85% of JavaScript online submissions for Reverse Nodes in k-Group.   
+Memory Usage: 37.7 MB, less than 100.00% of JavaScript online submissions for Reverse Nodes in k-Group.   
 
 - **高票答案对比**   
-最高票：https://leetcode.com/problems/swap-nodes-in-pairs/discuss/11030/My-accepted-java-code.-used-recursion.   
-作者通过递归来解决这个问题，这样子是将每一个阶段都视为头结点来进行处理，代码也可以达到更简洁，5行代码解决，相较而言较简洁的代码习惯是：对于需要多个变量来记录的循环，最好通过for循环来定义，而非定义在外部。       
+最高票：https://leetcode.com/problems/reverse-nodes-in-k-group/discuss/11423/Short-but-recursive-Java-code-with-comments   
+思路是一致的，评论区大佬给出了一个简洁的非递归方案如下，明明是一样的思路，大佬的代码可读性和简洁性上都好了很多，值得学习。       
   ```javascript
-  var swapPairs = function(head) {
-    if ((head == null)||(head.next == null)) return head;
-    let n = head.next;
-    head.next = swapPairs(head.next.next);
-    n.next = head;
-    return n;
-  };
+  var reverseKGroup = function(head, k) {
+    // 得到链表长度
+    let len = 0;
+    for (let i = head; i !== null; len++, i = i.next);
+    let dmy = new ListNode(0);
+    dmy.next = head;
+
+    // 每一组翻转
+    for(let prev = dmy, tail = head; len >= k; len -= k) {
+      for (let i = 1; i < k; i++) {
+        let next = tail.next.next;
+        tail.next.next = prev.next;
+        prev.next = tail.next;
+        tail.next = next;
+      }
+      prev = tail;
+      tail = tail.next;
+    }
+    return dmy.next;
+  }
   ```
-  Runtime: 48 ms, faster than 93.54% of JavaScript online submissions for Swap Nodes in Pairs.   
-  Memory Usage: 33.8 MB, less than 68.42% of JavaScript online submissions for Swap Nodes in Pairs.   
+  
+  Runtime: 80 ms, faster than 43.11% of JavaScript online submissions for Reverse Nodes in k-Group.   
+  Memory Usage: 37.4 MB, less than 100.00% of JavaScript online submissions for Reverse Nodes in k-Group.   
