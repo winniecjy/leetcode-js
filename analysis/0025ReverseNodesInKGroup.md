@@ -27,7 +27,7 @@ Memory Usage: 45.2 MB, less than 100.00% of JavaScript online submissions for Re
 
 - **高票答案对比**   
 最高票：https://leetcode.com/problems/swap-nodes-in-pairs/discuss/11030/My-accepted-java-code.-used-recursion.   
-作者通过递归来解决这个问题，这样子是将每一个阶段都视为头结点来进行处理，代码也可以达到更简洁，5行代码解决。       
+作者通过递归来解决这个问题，这样子是将每一个阶段都视为头结点来进行处理，代码也可以达到更简洁，5行代码解决，相较而言较简洁的代码习惯是：对于需要多个变量来记录的循环，最好通过for循环来定义，而非定义在外部。       
   ```javascript
   var swapPairs = function(head) {
     if ((head == null)||(head.next == null)) return head;
