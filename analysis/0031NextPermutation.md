@@ -20,12 +20,12 @@
                         尽可能小的增大其前一位（找到最长最大排列中大于2的最小数字为3，
                         交换2和3），该位置后转化为最小排列
   ```  
-  整理一下思路如下：   
-  ```
+  整理一下思路如下：    
   从后往前遍历数组nums，当前下标为i，数组长度为len：
-  1. 如果当前已知最大元素nums[len-1] > nums[i-1]：找到nums[j](j>i-1)，nums[j]为大于nums[i-1]的最小数字，交换nums[j]和nums[i-1]，重新排序nums[i] ~ nums[len-1]，保持其从小到大排序，nums为所求；
+  1. 如果当前已知最大元素nums[len-1] > nums[i-1]：找到nums\[j\](j>i-1)，nums[j]为大于nums[i-1]的最小数字，交换nums[j]和nums[i-1]，
+  重新排序nums[i] ~ nums[len-1]，保持其从小到大排序，nums为所求；
   2. 否则将nums[i-1]冒泡排序到nums数组末端，保持nums[i-1] ~ nums[len-1]为一个从小到大排列的数列，重复第1步；   
-  ```
+
   Runtime: 56 ms, faster than 96.99% of JavaScript online submissions for Next Permutation.   
   Memory Usage: 34.9 MB, less than 33.33% of JavaScript online submissions for Next Permutation.   
 
