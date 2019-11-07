@@ -16,7 +16,7 @@
   ``` 
     
 - **思路**   
-使用动态规划的思路，从左到右检查，当遇到左括号减1，遇到右括号加1，可以得到每个位置的栈深度，然后再次开始双指针大法，左右指针分别向中间靠拢，使得左指针指向'('，右指针指向')'，且右指针栈深度-左指针栈深度=1，则得到所求子串。    
+使用动态规划的思路， 
   Runtime: 56 ms, faster than 96.99% of JavaScript online submissions for Next Permutation.   
   Memory Usage: 34.9 MB, less than 33.33% of JavaScript online submissions for Next Permutation.   
 
