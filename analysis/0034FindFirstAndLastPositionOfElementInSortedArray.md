@@ -15,16 +15,16 @@
   ``` 
     
 - **思路**   
-二分查找。   
-Runtime: 60 ms, faster than 44.98% of JavaScript online submissions for Search in Rotated Sorted Array.   
-Memory Usage: 33.9 MB, less than 50.00% of JavaScript online submissions for Search in Rotated Sorted Array.   
+先通过二分查找初步找到目标值的位置，如果找不到则直接返回[-1,-1]，否则就在找到的位置向左右扩展，直到找到目标值的边界，返回结果。      
+Runtime: 44 ms, faster than 99.36% of JavaScript online submissions for Find First and Last Position of Element in Sorted Array.   
+Memory Usage: 35.4 MB, less than 10.00% of JavaScript online submissions for Find First and Last Position of Element in Sorted Array.    
 
 
 - **优化思路**   
-考虑合并两次二分查找，降低一些时间复杂度。   
-Runtime: 48 ms, faster than 95.54% of JavaScript online submissions for Search in Rotated Sorted Array.   
-Memory Usage: 33.9 MB, less than 42.31% of JavaScript online submissions for Search in Rotated Sorted Array.   
+无
 
 - **高票答案对比**   
-最高票：https://leetcode.com/problems/search-in-rotated-sorted-array/discuss/14425/Concise-O(log-N)-Binary-search-solution   
-思路同。   
+最高票：https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/discuss/14699/Clean-iterative-solution-with-two-binary-searches-(with-explanation)    
+通过两次二分查找，分别找到左边界和右边界，注意到第二次边界查询并不需要从数组首尾开始，而是在左边界~数组末尾之间查找。       
+Runtime: 52 ms, faster than 87.55% of JavaScript online submissions for Find First and Last Position of Element in Sorted Array.   
+Memory Usage: 35 MB, less than 80.00% of JavaScript online submissions for Find First and Last Position of Element in Sorted Array.    
