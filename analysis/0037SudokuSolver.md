@@ -14,19 +14,18 @@
   - 可以假设数独题目都拥有唯一有效解。   
   - 给出的数独面板大小永远为9x9。   
 - **思路**   
-哈希表+递归的思路，每一个单元格都必须在行/列/九宫格中合法，由于行/列合法相对比较容易确认，因此以九宫格为一个单位，确定其解，逐步递归直到所有九宫格的解都合法。由于中间的九宫格的影响较大，所以递归的顺序为中间九宫格->上中/下中/左中/右中->左上角/右上角/左下角/右下角。       
+哈希表+递归的思路，每一个单元格都必须在行/列/九宫格中合法，从左到右从上到下穷举。   
+Runtime: 192 ms, faster than 11.55% of JavaScript online submissions for Sudoku Solver.   
+Memory Usage: 39.3 MB, less than 100.00% of JavaScript online submissions for Sudoku Solver.   
 
 - **优化思路**   
-第一思路对于行/列/九宫格都分别使用一个哈希表，每次开始时需要重置。可以通过一个统一的哈希表，记录当前出现过的所有数字的下标(row*9+col)，每次发现有重复数据时，比较下标，确认是否为同一个行/列/九宫格，假设当前下标为e，已知前置元素下标为i，规则匹配如下：       
-  - 行：e/9 === i/9  
-  - 列：e%9 === i%9    
-  - 九宫格： parseInt(parseInt(e/9)/3)*3+parseInt((e%9)/3) == parseInt(parseInt(i/9)/3)*3+parseInt((i%9)/3)   
+除了递归目前没有其他思路，所以考虑是否可以去除哈希表，减少哈希表初始化和赋值，可以去除一次遍历数组。    
+Runtime: 60 ms, faster than 99.13% of JavaScript online submissions for Sudoku Solver.   
+Memory Usage: 36.3 MB, less than 100.00% of JavaScript online submissions for Sudoku Solver.   
 
-  Runtime: 72 ms, faster than 85.18% of JavaScript online submissions for Valid Sudoku.   
-  Memory Usage: 37.8 MB, less than 80.00% of JavaScript online submissions for Valid Sudoku.   
 
 - **高票答案对比**   
-最高票：https://leetcode.com/problems/valid-sudoku/discuss/15472/Short%2BSimple-Java-using-Strings   
-同第二思路，作者给出了一个可读性更佳的方案。hashMap通过字符串的方式记录，形式如`1 in row 0/1 in col 0/1 in block 0`，当哈希表中存在一样的字符串则表示数独不合法。       
-Runtime: 92 ms, faster than 20.50% of JavaScript online submissions for Valid Sudoku.   
-Memory Usage: 41.3 MB, less than 26.67% of JavaScript online submissions for Valid Sudoku.   
+最高票：https://leetcode.com/problems/sudoku-solver/discuss/15752/Straight-Forward-Java-Solution-Using-Backtracking   
+最高票思路和优化思路一致。在讨论区发现了一个可以优化的点是先获取所有需要填写的空格位置，仅递归这些位置，可以减少递归层级。    
+Runtime: 84 ms, faster than 68.63% of JavaScript online submissions for Sudoku Solver.   
+Memory Usage: 37.5 MB, less than 100.00% of JavaScript online submissions for Sudoku Solver.   
