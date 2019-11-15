@@ -45,3 +45,4 @@ https://leetcode.com/problemset/algorithms/
 0035 | Search Insert Position | [题解](https://github.com/jinglecjy/leetcode-js/blob/master/analysis/0035SearchInsertPosition.md) | [实现](https://github.com/jinglecjy/leetcode-js/blob/master/src/0035SearchInsertPosition.js) | 二分查找 | 2019/11/09
 0036 | Valid Sudoku | [题解](https://github.com/jinglecjy/leetcode-js/blob/master/analysis/0036ValidSudoku.md) | [实现](https://github.com/jinglecjy/leetcode-js/blob/master/src/0036ValidSudoku.js) | 哈希表 | 2019/11/11
 0037 | Sudoku Solver | [题解](https://github.com/jinglecjy/leetcode-js/blob/master/analysis/0037SudokuSolver.md) | [实现](https://github.com/jinglecjy/leetcode-js/blob/master/src/0037SudokuSolver.js) | 递归 | 2019/11/12
+0038 | Count and Say | [题解](https://github.com/jinglecjy/leetcode-js/blob/master/analysis/0038CountAndSay.md) | [实现](https://github.com/jinglecjy/leetcode-js/blob/master/src/0038CountAndSay.js) | 水题 | 2019/11/13

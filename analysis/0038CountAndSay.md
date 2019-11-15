@@ -23,14 +23,16 @@
   Output: "1211"
   ```
 - **思路**   
-哈希表+递归的思路，每一个单元格都必须在行/列/九宫格中合法，由于行/列合法相对比较容易确认，因此以九宫格为一个单位，确定其解，逐步递归直到所有九宫格的解都合法。由于中间的九宫格的影响较大，所以递归的顺序为中间九宫格->上中/下中/左中/右中->左上角/右上角/左下角/右下角。       
+用循环遍历上一结果，对于连续数字记录其长度，存到新字符串里即可。为了避免麻烦的头尾，每次遍历的时候都在上一结果的头尾加上字符，这样就只需要判断是否当前字符与上一字符是否相等即可。   
+Runtime: 60 ms, faster than 52.40% of JavaScript online submissions for Count and Say.   
+Memory Usage: 35.5 MB, less than 41.67% of JavaScript online submissions for Count and Say.             
 
 - **优化思路**   
-看到n<=30我真的忍不住想暴力解，列出所有结果直接匹配。   
+看到n<=30我真的忍不住想暴力解，快乐AC，复杂度O(1)。   
+Runtime: 52 ms, faster than 91.06% of JavaScript online submissions for Count and Say.   
+Memory Usage: 33.8 MB, less than 100.00% of JavaScript online submissions for Count and Say.   
 
 
 - **高票答案对比**   
-最高票：https://leetcode.com/problems/valid-sudoku/discuss/15472/Short%2BSimple-Java-using-Strings   
-同第二思路，作者给出了一个可读性更佳的方案。hashMap通过字符串的方式记录，形式如`1 in row 0/1 in col 0/1 in block 0`，当哈希表中存在一样的字符串则表示数独不合法。       
-Runtime: 92 ms, faster than 20.50% of JavaScript online submissions for Valid Sudoku.   
-Memory Usage: 41.3 MB, less than 26.67% of JavaScript online submissions for Valid Sudoku.   
+最高票：https://leetcode.com/problems/count-and-say/discuss/15995/Examples-of-nth-sequence    
+高票思路在吐槽题目有歧义，实际与第一思路一致。   
