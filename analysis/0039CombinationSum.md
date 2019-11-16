@@ -25,7 +25,9 @@
   ]
   ```
 - **思路**   
-
+回溯，由于数字集合中的所有数字都可以无限次使用，所以每次的候选数字都是全集合；另外数字集合中不重复，所以可以不处理结果重复。先对candidates进行从小到大排序，当target\<candidates_index时返回结果，时间复杂度O(target^2)。    
+Runtime: 80 ms, faster than 49.78% of JavaScript online submissions for Combination Sum.   
+Memory Usage: 37.3 MB, less than 26.67% of JavaScript online submissions for Combination Sum.   
 
 - **优化思路**   
 
