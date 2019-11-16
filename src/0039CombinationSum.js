@@ -4,7 +4,7 @@
  * @param {number} target
  * @return {number[][]}
  */
-var combinationSum = function(candidates, target) {
+var combinationSumNormal = function(candidates, target) {
   function sortNumber(a,b) {
     return a - b
   }
