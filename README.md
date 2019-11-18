@@ -47,3 +47,4 @@ https://leetcode.com/problemset/algorithms/
 0037 | Sudoku Solver | [题解](https://github.com/jinglecjy/leetcode-js/blob/master/analysis/0037SudokuSolver.md) | [实现](https://github.com/jinglecjy/leetcode-js/blob/master/src/0037SudokuSolver.js) | 递归 | 2019/11/12
 0038 | Count and Say | [题解](https://github.com/jinglecjy/leetcode-js/blob/master/analysis/0038CountAndSay.md) | [实现](https://github.com/jinglecjy/leetcode-js/blob/master/src/0038CountAndSay.js) | 水题 | 2019/11/13
 0039 | Combination Sum | [题解](https://github.com/jinglecjy/leetcode-js/blob/master/analysis/0039CombinationSum.md) | [实现](https://github.com/jinglecjy/leetcode-js/blob/master/src/0039CombinationSum.js) | DP，回溯 | 2019/11/17
+0040 | Combination Sum II | [题解](https://github.com/jinglecjy/leetcode-js/blob/master/analysis/0040CombinationSumII.md) | [实现](https://github.com/jinglecjy/leetcode-js/blob/master/src/0040CombinationSumII.js) | DP，回溯 | 2019/11/18
