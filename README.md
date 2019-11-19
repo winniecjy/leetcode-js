@@ -48,3 +48,4 @@ https://leetcode.com/problemset/algorithms/
 0038 | Count and Say | [题解](https://github.com/jinglecjy/leetcode-js/blob/master/analysis/0038CountAndSay.md) | [实现](https://github.com/jinglecjy/leetcode-js/blob/master/src/0038CountAndSay.js) | 水题 | 2019/11/13
 0039 | Combination Sum | [题解](https://github.com/jinglecjy/leetcode-js/blob/master/analysis/0039CombinationSum.md) | [实现](https://github.com/jinglecjy/leetcode-js/blob/master/src/0039CombinationSum.js) | DP，回溯 | 2019/11/17
 0040 | Combination Sum II | [题解](https://github.com/jinglecjy/leetcode-js/blob/master/analysis/0040CombinationSumII.md) | [实现](https://github.com/jinglecjy/leetcode-js/blob/master/src/0040CombinationSumII.js) | DP，回溯 | 2019/11/18
+0041 | First Missing Positive | [题解](https://github.com/jinglecjy/leetcode-js/blob/master/analysis/0041FirstMissingPositive.md) | [实现](https://github.com/jinglecjy/leetcode-js/blob/master/src/0041FirstMissingPositive.js) | 数学 | 2019/11/19

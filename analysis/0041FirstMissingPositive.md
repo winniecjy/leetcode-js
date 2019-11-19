@@ -34,6 +34,13 @@
 
   从特殊情况（数组为1~len的连续正整数数组）和情况2一定从1开始，可以发现一个规律，**如果进行了排序，此时最小数字的最长连续数组数值，永远都为下标+1**。   
   由于我们不关心数组中其他数字的位置，所以可以将val\<len的数字与arr[val-1]的数字交换位置（一次遍历O(n)）。再遍历一次数组，找到第一个`index+1 !== arr[index]`即为所求。   
+  Runtime: 56 ms, faster than 74.45% of JavaScript online submissions for First Missing Positive.   
+  Memory Usage: 34.4 MB, less than 75.00% of JavaScript online submissions for First Missing Positive.    
 - **优化思路**   
+无。   
 
 - **高票答案对比**   
+高票答案：https://leetcode.com/problems/first-missing-positive/discuss/17071/My-short-c%2B%2B-solution-O(1)-space-and-O(n)-time   
+同第一思路，优化一些判断。     
+  Runtime: 52 ms, faster than 91.76% of JavaScript online submissions for First Missing Positive.  
+  Memory Usage: 34.4 MB, less than 66.67% of JavaScript online submissions for First Missing Positive.  
