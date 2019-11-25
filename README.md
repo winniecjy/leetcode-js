@@ -50,3 +50,4 @@ https://leetcode.com/problemset/algorithms/
 0040 | Combination Sum II | [题解](https://github.com/jinglecjy/leetcode-js/blob/master/analysis/0040CombinationSumII.md) | [实现](https://github.com/jinglecjy/leetcode-js/blob/master/src/0040CombinationSumII.js) | DP，回溯 | 2019/11/18
 0041 | First Missing Positive | [题解](https://github.com/jinglecjy/leetcode-js/blob/master/analysis/0041FirstMissingPositive.md) | [实现](https://github.com/jinglecjy/leetcode-js/blob/master/src/0041FirstMissingPositive.js) | 数学 | 2019/11/19
 0042 | Trapping Rain Water | [题解](https://github.com/jinglecjy/leetcode-js/blob/master/analysis/0042TrappingRainWater.md) | [实现](https://github.com/jinglecjy/leetcode-js/blob/master/src/0042TrappingRainWater.js) | 数学，双指针 | 2019/11/20
+0043 | Multiply Strings | [题解](https://github.com/jinglecjy/leetcode-js/blob/master/analysis/0043MultiplyStrings.md) | [实现](https://github.com/jinglecjy/leetcode-js/blob/master/src/0043MultiplyStrings.js) | 大数运算 | 2019/11/21

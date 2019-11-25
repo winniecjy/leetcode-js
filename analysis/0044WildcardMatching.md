@@ -1,21 +1,51 @@
-## 题解：[20191121]#0043 Multiply Strings
+## 题解：[20191125]#0044 Wildcard Matching
 - **题干**   
-输入两个非负整数num1和num2，用字符串形式表示。返回num1和num2的乘积，以字符串形式表示。   
+输入字符串s和正则表达式p，实现一个通配符匹配支持'?'和'*'。   
+  - '?' 匹配任意一个字符
+  - '*' 匹配任意字符序列（包含空序列）
+
+  需要全局匹配输入的字符串s（非局部匹配）。    
+  说明：   
+    - 字符串s可为空，只包含小写字母a-z。    
+    - 正则表达式p可为空，只包含小写字母a-z和字符?和*。   
+  
   示例：   
-  ```
-  // eg.1
-  Input: num1 = "2", num2 = "3"
-  Output: "6"
-  // eg. 2
-  Input: num1 = "123", num2 = "456"
-  Output: "56088"
+  ```javascript
+  // e.g.1
+  Input:
+  s = "aa"
+  p = "a"
+  Output: false
+  Explanation: "a" does not match the entire string "aa".
+
+  // e.g.2
+  Input:
+  s = "aa"
+  p = "*"
+  Output: true
+  Explanation: '*' matches any sequence.
+
+  // e.g.3
+  Input:
+  s = "cb"
+  p = "?a"
+  Output: false
+  Explanation: '?' matches 'c', but the second letter is 'a', which does not match 'b'.
+
+  // e.g.4
+  Input:
+  s = "adceb"
+  p = "*a*b"
+  Output: true
+  Explanation: The first '*' matches the empty sequence, while the second '*' matches the substring "dce".
+
+  // e.g.5
+  Input:
+  s = "acdcb"
+  p = "a*c?b"
+  Output: false
   ```
 
-  说明：  
-  1. num1和num2的长度都小于110；   
-  2. num1和num2只包含数字0-9；
-  3. num1和num2都不包含前置零，除了数字0；
-  4. 要求不使用内置的大数计算库或者是直接将输入的数字转为整数；   
 - **思路**   
 字符串是个限制也是个很好的提示。显然这是一个大数相乘的题目，从低位按位计算结果（模拟人的计算方法），时间复杂度O(len1 * len2)。   
 Runtime: 72 ms, faster than 70.12% of JavaScript online submissions for Multiply Strings.   
