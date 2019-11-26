@@ -47,7 +47,7 @@
   ```
 
 - **思路**   
-字符串是个限制也是个很好的提示。显然这是一个大数相乘的题目，从低位按位计算结果（模拟人的计算方法），时间复杂度O(len1 * len2)。   
+典型的动态规划问题，当前步骤的答案可以依赖上一步骤答案得出。时间复杂度O(sLen*pLen)。      
 Runtime: 72 ms, faster than 70.12% of JavaScript online submissions for Multiply Strings.   
 Memory Usage: 38.8 MB, less than 25.00% of JavaScript online submissions for Multiply Strings.     
 
