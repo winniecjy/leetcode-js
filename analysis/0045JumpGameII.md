@@ -12,13 +12,14 @@
 可以假设总是能到达数组最后位置。    
 
 - **思路**   
-朴素的贪心思路，每个位置的最小步数都可以通过前面的位置得知。通过一个数组记录每个位置需要的最小步数。    
+朴素的遍历思路，每个位置的最小步数都可以通过前面的位置得知。通过一个数组记录每个位置需要的最小步数。时间复杂度为O(n^2)。       
 Runtime: 540 ms, faster than 5.14% of JavaScript online submissions for Jump Game II.   
 Memory Usage: 36 MB, less than 16.67% of JavaScript online submissions for Jump Game II.   
 
 
 - **优化思路**   
- 
+加入贪心算法，每次都走尽量远，如果无法到达终点，则返回上一步重新走。   
+
 
 - **高票答案对比**   
 高票思路：https://leetcode.com/problems/multiply-strings/discuss/17605/Easiest-JAVA-Solution-with-Graph-Explanation   

@@ -4,7 +4,7 @@
  * @param {string} p
  * @return {boolean}
  */
-var isMatch = function(s, p) {
+var isMatchNormal = function(s, p) {
   let dp = [];
   dp[0] = [true].concat(Array(p.length).fill(false))
   // 初始化动态规划数组
@@ -36,7 +36,7 @@ var isMatch = function(s, p) {
  * @param {*}} s 
  * @param {*} p 
  */
-var isMatch = function(s, p) {
+var isMatchVoted = function(s, p) {
   let currS = 0,
     currP = 0,
     lastStarS = 0,
