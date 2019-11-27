@@ -30,3 +30,42 @@ var isMatch = function(s, p) {
 
   return dp[s.length][p.length];
 };
+
+/**
+ * 高票思路
+ * @param {*}} s 
+ * @param {*} p 
+ */
+var isMatch = function(s, p) {
+  let currS = 0,
+    currP = 0,
+    lastStarS = 0,
+    lastStarP = -1;
+  
+  while (currS < s.length) {
+    // 同时移动两个指针
+    if ((currP < p.length && p[currP] == "?") || s[currS] == p[currP]) {
+      currS++;
+      currP++;
+    }
+    // 当前为'*'，只移动正则指针
+    else if (currP < p.length && p[currP] === "*") {
+      lastStarP = currP;
+      lastStarS = currS;
+      currP++;
+    }
+    // 正则有前置位置为'*'，移动指针回退到该位置
+    else if (lastStarP != -1) {
+      currP = lastStarP + 1;
+      lastStarS++;
+      currS = lastStarS;
+    }
+    // 当前正则不是'*'，正则前一位也不是'*'，字符串不匹配
+    else return false;
+  }
+
+  // 检查正则中的剩余字符
+  while (currP < p.length && p[currP] == "*") currP++;
+
+  return currP == p.length;
+};
