@@ -12,13 +12,12 @@
 可以假设总是能到达数组最后位置。    
 
 - **思路**   
-典型的动态规划问题，当前步骤的答案可以依赖上一步骤答案得出。时间复杂度O(sLen*pLen)。      
-Runtime: 72 ms, faster than 70.12% of JavaScript online submissions for Multiply Strings.   
-Memory Usage: 38.8 MB, less than 25.00% of JavaScript online submissions for Multiply Strings.     
+朴素的贪心思路，每个位置的最小步数都可以通过前面的位置得知。通过一个数组记录每个位置需要的最小步数。    
+Runtime: 540 ms, faster than 5.14% of JavaScript online submissions for Jump Game II.   
+Memory Usage: 36 MB, less than 16.67% of JavaScript online submissions for Jump Game II.   
 
 
 - **优化思路**   
-无。  
  
 
 - **高票答案对比**   
