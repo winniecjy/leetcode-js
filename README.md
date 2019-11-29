@@ -52,3 +52,4 @@ https://leetcode.com/problemset/algorithms/
 0042 | Trapping Rain Water | [题解](https://github.com/jinglecjy/leetcode-js/blob/master/analysis/0042TrappingRainWater.md) | [实现](https://github.com/jinglecjy/leetcode-js/blob/master/src/0042TrappingRainWater.js) | 数学，双指针 | 2019/11/20
 0043 | Multiply Strings | [题解](https://github.com/jinglecjy/leetcode-js/blob/master/analysis/0043MultiplyStrings.md) | [实现](https://github.com/jinglecjy/leetcode-js/blob/master/src/0043MultiplyStrings.js) | 大数运算 | 2019/11/21
 0044 | Wildcard Matching | [题解](https://github.com/jinglecjy/leetcode-js/blob/master/analysis/0044WildcardMatching.md) | [实现](https://github.com/jinglecjy/leetcode-js/blob/master/src/0044WildcardMatching.js) | 动态规划，贪心算法 | 2019/11/26
+0045 | Jump Game II | [题解](https://github.com/jinglecjy/leetcode-js/blob/master/analysis/0045JumpGameII.md) | [实现](https://github.com/jinglecjy/leetcode-js/blob/master/src/0045JumpGameII.js) | 贪心算法 | 2019/11/28
