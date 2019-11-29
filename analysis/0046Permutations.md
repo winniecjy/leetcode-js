@@ -16,27 +16,15 @@
   ```
 
 - **思路**   
-全排列问题。
-
+全排列问题，可以通过递归回溯实现。   
+Runtime: 68 ms, faster than 68.91% of JavaScript online submissions for Permutations.   
+Memory Usage: 37.6 MB, less than 8.00% of JavaScript online submissions for Permutations.   
 
 - **优化思路**   
-无。    
+无。全排列的思路比较经典了，没有想到什么优化的地方。目前性能瓶颈应该是在内置函数的使用方案上了。            
 
 - **高票答案对比**   
-高票思路：https://leetcode.com/problems/jump-game-ii/discuss/18014/Concise-O(n)-one-loop-JAVA-solution-based-on-Greedy    
-BFS思路，可以根据每个节点可到达的距离构造出一个树🌲结构，树的根节点是arr[0]，树的第一层是跳转1步就能到达的节点，第二层是跳转2步能到达的节点，以此类推，...   
-对于这个树结构进行深度优先遍历，当找到目标节点时，则结束遍历返回当前层数，时间复杂度为O(n)。关键代码思路如下：        
-  ```javascript
-  初始化当前层数：level = 0;
-  初始化当前能到达的最远位置，由于标识什么位置是当前层的尽头： currFarest = 0;
-  记录下一层能到达的最远位置，初始化：nextFarest = 0;
-  
-  从0开始遍历数组，当前下标为index：
-    更新下一层能到达最远位置：nextFarest = max(nextFarest, index+arr[index])
-    当已经到达当前层尽头（即index===currFarest）：level++, currFarest=nextFarest
+高票思路：https://leetcode.com/problems/permutations/discuss/431747/Javasctipt-56-ms-faster-than-99.05          
 
-  返回当前层数
-  ```
-
-  Runtime: 56 ms, faster than 85.33% of JavaScript online submissions for Jump Game II.   
-  Memory Usage: 35.3 MB, less than 100.00% of JavaScript online submissions for Jump Game II.     
+Runtime: 56 ms, faster than 98.97% of JavaScript online submissions for Permutations.   
+Memory Usage: 36.2 MB, less than 84.00% of JavaScript online submissions for Permutations.   
