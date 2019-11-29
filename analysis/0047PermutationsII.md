@@ -26,7 +26,7 @@ Memory Usage: 37.6 MB, less than 22.22% of JavaScript online submissions for Per
 高票思路：https://leetcode.com/problems/permutations-ii/discuss/18594/Really-easy-Java-solution-much-easier-than-the-solutions-with-very-high-vote   
 同优化思路，作者的代码简练在于对重复元素过滤的方法，首先对数组进行排序，通过map记录已经使用的候选元素，回溯过程中需要两个过滤条件：   
   - 当前排列中已经插入该元素：map[i] === true      
-  - 当前元素与前一个元素重复，而且非第一元素排列构造过程：i>0 && nums[i-1]==nums[i] && !map[i-1]   
+  - 当前元素与前一个元素重复，而且非第一元素（即该元素第一次出现）排列构造过程：i>0 && nums[i-1]==nums[i] && !map[i-1]   
 
   Runtime: 64 ms, faster than 99.01% of JavaScript online submissions for Permutations II.   
   Memory Usage: 37.4 MB, less than 55.56% of JavaScript online submissions for Permutations II.    
