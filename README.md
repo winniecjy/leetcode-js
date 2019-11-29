@@ -54,3 +54,4 @@ https://leetcode.com/problemset/algorithms/
 0044 | Wildcard Matching | [题解](https://github.com/jinglecjy/leetcode-js/blob/master/analysis/0044WildcardMatching.md) | [实现](https://github.com/jinglecjy/leetcode-js/blob/master/src/0044WildcardMatching.js) | 动态规划，贪心算法 | 2019/11/26
 0045 | Jump Game II | [题解](https://github.com/jinglecjy/leetcode-js/blob/master/analysis/0045JumpGameII.md) | [实现](https://github.com/jinglecjy/leetcode-js/blob/master/src/0045JumpGameII.js) | 贪心算法 | 2019/11/28
 0046 | Permutations | [题解](https://github.com/jinglecjy/leetcode-js/blob/master/analysis/0046Permutations.md) | [实现](https://github.com/jinglecjy/leetcode-js/blob/master/src/0046Permutations.js) | 回溯 | 2019/11/29
+0047 | Permutations II | [题解](https://github.com/jinglecjy/leetcode-js/blob/master/analysis/0047PermutationsII.md) | [实现](https://github.com/jinglecjy/leetcode-js/blob/master/src/0047PermutationsII.js) | 回溯 | 2019/11/30
