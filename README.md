@@ -56,3 +56,4 @@ https://leetcode.com/problemset/algorithms/
 0046 | Permutations | [题解](https://github.com/jinglecjy/leetcode-js/blob/master/analysis/0046Permutations.md) | [实现](https://github.com/jinglecjy/leetcode-js/blob/master/src/0046Permutations.js) | 回溯 | 2019/11/29
 0047 | Permutations II | [题解](https://github.com/jinglecjy/leetcode-js/blob/master/analysis/0047PermutationsII.md) | [实现](https://github.com/jinglecjy/leetcode-js/blob/master/src/0047PermutationsII.js) | 回溯 | 2019/11/30
 0048 | Rotate Image | [题解](https://github.com/jinglecjy/leetcode-js/blob/master/analysis/0048RotateImage.md) | [实现](https://github.com/jinglecjy/leetcode-js/blob/master/src/0048RotateImage.js) | 数组，矩阵变换 | 2019/11/30
+0049 | Group Anagrams | [题解](https://github.com/jinglecjy/leetcode-js/blob/master/analysis/0049GroupAnagrams.md) | [实现](https://github.com/jinglecjy/leetcode-js/blob/master/src/0049GroupAnagrams.js) | 哈希表 | 2019/12/01
