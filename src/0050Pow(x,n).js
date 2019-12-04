@@ -7,7 +7,7 @@
 var myPow = function(x, n) {
   if (n=0) return 1;
   const binaryN = n.toString(2);
-  let base = 1;
+  let base = '1';
   for(let i=binaryN.length-1; i>=0; i--) {
 
   }
