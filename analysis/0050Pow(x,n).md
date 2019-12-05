@@ -26,8 +26,8 @@
     按照二进制顺序从右到左，2^(i+1) = 2^i+2^i    
     5^4 = 5^(2^2) = 5^(2^1+2^1) = 5^(2^1) \* 5^(2^1)   
 
-  对于n<0，可以将x转换为小数x^(-1*n) = (x^-1)^n，时间复杂度为O(logn)。
-  Runtime: 56 ms, faster than 80.47% of JavaScript online submissions for Pow(x, n).   
+  对于n<0，可以将x转换为小数x^(-1*n) = (x^-1)^n，时间复杂度为O(logn)。   
+  Runtime: 56 ms, faster than 80.47% of JavaScript online submissions for Pow(x, n).     
   Memory Usage: 33.9 MB, less than 70.59% of JavaScript online submissions for Pow(x, n).   
 
 
