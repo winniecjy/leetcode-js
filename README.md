@@ -58,4 +58,4 @@ https://leetcode.com/problemset/algorithms/
 0048 | Rotate Image | [题解](https://github.com/jinglecjy/leetcode-js/blob/master/analysis/0048RotateImage.md) | [实现](https://github.com/jinglecjy/leetcode-js/blob/master/src/0048RotateImage.js) | 数组，矩阵变换 | 2019/11/30
 0049 | Group Anagrams | [题解](https://github.com/jinglecjy/leetcode-js/blob/master/analysis/0049GroupAnagrams.md) | [实现](https://github.com/jinglecjy/leetcode-js/blob/master/src/0049GroupAnagrams.js) | 哈希表 | 2019/12/01
 0050 | Pow(x,n) | [题解](https://github.com/jinglecjy/leetcode-js/blob/master/analysis/0050Pow(x,n).md) | [实现](https://github.com/jinglecjy/leetcode-js/blob/master/src/0050Pow(x,n).js) | 幂运算 | 2019/12/04
-0051 | N-Queens | [题解](https://github.com/jinglecjy/leetcode-js/blob/master/analysis/0051NQueens.md) | [实现](https://github.com/jinglecjy/leetcode-js/blob/master/src/0051NQueens.js) | 幂运算 | 2019/12/05
+0051 | N-Queens | [题解](https://github.com/jinglecjy/leetcode-js/blob/master/analysis/0051NQueens.md) | [实现](https://github.com/jinglecjy/leetcode-js/blob/master/src/0051NQueens.js) | 回溯 | 2019/12/05
