@@ -36,3 +36,6 @@ N皇后问题，在一个NxN的棋盘上放上N个皇后，使得皇后之间彼
 无。   
 
 - **高票答案对比**   
+高票答案：https://leetcode.com/problems/n-queens-ii/discuss/20058/Accepted-Java-Solution    
+同第一思路。    
+PS：迷惑行为大赏0052和0051有啥差别哦
