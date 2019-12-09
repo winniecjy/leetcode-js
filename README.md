@@ -63,3 +63,4 @@ https://leetcode.com/problemset/algorithms/
 0053 | Maximum Subarray | [题解](https://github.com/jinglecjy/leetcode-js/blob/master/analysis/0053MaximumSubarray.md) | [实现](https://github.com/jinglecjy/leetcode-js/blob/master/src/0053MaximumSubarray.js) | 动态规划，分治 | 2019/12/07
 0054 | Spiral Matrix | [题解](https://github.com/jinglecjy/leetcode-js/blob/master/analysis/0054SpiralMatrix.md) | [实现](https://github.com/jinglecjy/leetcode-js/blob/master/src/0054SpiralMatrix.js) | 数组遍历 | 2019/12/08
 0055 | Jump Game | [题解](https://github.com/jinglecjy/leetcode-js/blob/master/analysis/0055JumpGame.md) | [实现](https://github.com/jinglecjy/leetcode-js/blob/master/src/0055JumpGame.js) | 贪心算法，BFS | 2019/12/08
+0056 | Merge Intervals | [题解](https://github.com/jinglecjy/leetcode-js/blob/master/analysis/0056MergeIntervals.md) | [实现](https://github.com/jinglecjy/leetcode-js/blob/master/src/0056MergeIntervals.js) | 数组，排序 | 2019/12/09

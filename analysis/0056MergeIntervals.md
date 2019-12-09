@@ -20,14 +20,15 @@
   - a==c, 则比较b,d，如果b<=d则[a,b]位于前，否则[c,d]位于前
   
   排序完成后对遍历一次数组，当`c>=b`时，则合并区间。时间复杂度O(nlogn)。   
-  Runtime: 104 ms, faster than 8.44% of JavaScript online submissions for Merge Intervals.   
-  Memory Usage: 38.2 MB, less than 7.69% of JavaScript online submissions for Merge Intervals.   
+  Runtime: 96 ms, faster than 13.36% of JavaScript online submissions for Merge Intervals.   
+  Memory Usage: 38 MB, less than 7.69% of JavaScript online submissions for Merge Intervals.
 - **优化思路**   
-这个时间复杂度显然有较大优化空间，考虑是否可以不对区间进行排序。       
-
+这个时间复杂度不太满意，主要耗时操作是在排序上，目前感觉排序还是需要的，所以考虑优化一下排序比较规则。当a==c时的状况是可以不处理的，因为在后续合并区间的时候还是需要比较b和d。       
+Runtime: 76 ms, faster than 68.80% of JavaScript online submissions for Merge Intervals.   
+Memory Usage: 37.7 MB, less than 15.38% of JavaScript online submissions for Merge Intervals.   
 
 - **高票答案对比**   
-高票思路：https://leetcode.com/problems/jump-game/discuss/20917/Linear-and-simple-solution-in-C%2B%2B    
-遍历数组，比较当前位置可到达的最远距离和已知的可达到最远距离，记录目前位置可到达的最远距离。如遍历到下标大于可到达的最远距离，则退出遍历。           
-Runtime: 56 ms, faster than 83.07% of JavaScript online submissions for Jump Game.   
-Memory Usage: 35.6 MB, less than 40.00% of JavaScript online submissions for Jump Game.   
+高票思路：https://leetcode.com/problems/merge-intervals/discuss/21222/A-simple-Java-solution   
+同第一思路，作者不在原数组操作，而是新建一个结果数组，最后合并时遍历区间数组，与结果数组中的最后一个区间比较，根据比较结果，修改最后区间的结束位置即可。             
+Runtime: 60 ms, faster than 99.62% of JavaScript online submissions for Merge Intervals.   
+Memory Usage: 37 MB, less than 76.92% of JavaScript online submissions for Merge Intervals.   
