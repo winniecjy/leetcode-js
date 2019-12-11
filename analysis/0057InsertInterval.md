@@ -1,4 +1,4 @@
-## 题解：[20191209]#0056 Merge Intervals
+## 题解：[20191212]#0057 Insert Interval
 - **题干**   
 给出一组非重合的区间集合和新的区间，将新区间插入到集合中（当有重合时需要合并区间）。   
 区间的初始顺序是按照区间开始时间排序的。   
@@ -14,7 +14,9 @@
   ```
 
 - **第一思路**   
-由于区间集合初始就是有序的，所以对其进行遍历与新区间[a,b]进行对比，找到第一个区间[c,d]，其中d<=a；然后继续遍历找到区间[e,f]，其中e>b；处理[c,d]和[e,f]之间的区间即可，时间复杂度O(n)。  
+由于区间集合初始就是有序的，所以将新区间插入，从插入位置开始检查合并区间，时间复杂度O(n)。  
+Runtime: 72 ms, faster than 39.86% of JavaScript online submissions for Insert Interval.   
+Memory Usage: 37.3 MB, less than 25.00% of JavaScript online submissions for Insert Interval.   
 
 - **优化思路**   
 这个时间复杂度不太满意，主要耗时操作是在排序上，目前感觉排序还是需要的，所以考虑优化一下排序比较规则。当a==c时的状况是可以不处理的，因为在后续合并区间的时候还是需要比较b和d。       
