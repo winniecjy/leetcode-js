@@ -67,3 +67,4 @@ https://leetcode.com/problemset/algorithms/
 0057 | Insert Interval | [题解](https://github.com/jinglecjy/leetcode-js/blob/master/analysis/0057InsertInterval.md) | [实现](https://github.com/jinglecjy/leetcode-js/blob/master/src/0057InsertInterval.js) | 数组，插入排序 | 2019/12/12
 0058 | Length of Last Word | [题解](https://github.com/jinglecjy/leetcode-js/blob/master/analysis/0058LengthOfLastWord.md) | [实现](https://github.com/jinglecjy/leetcode-js/blob/master/src/0058LengthOfLastWord.js) | 循环 | 2019/12/12
 0059 | Spiral Matrix II | [题解](https://github.com/jinglecjy/leetcode-js/blob/master/analysis/0059SpiralMatrixII.md) | [实现](https://github.com/jinglecjy/leetcode-js/blob/master/src/0059SpiralMatrixII.js) | 数组遍历 | 2019/12/14
+0060 | Permutation Sequence | [题解](https://github.com/jinglecjy/leetcode-js/blob/master/analysis/0060PermutationSequence.md) | [实现](https://github.com/jinglecjy/leetcode-js/blob/master/src/0060PermutationSequence.js) | 全排列规律 | 2019/12/14
