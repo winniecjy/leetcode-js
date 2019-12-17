@@ -16,7 +16,7 @@
   ```
 
 - **第一思路**   
-动态规划，当前位置的最短路径 = MIN (上方的最短路径, 左侧的最短路径) + 当前位置消费。时间复杂度O(n^2)，空间复杂度O(n^2)。   
+动态规划，当前位置的最短路径 = MIN (上方的最短路径, 左侧的最短路径) + 当前位置消费。时间复杂度O(n^2)，空间复杂度O(n)。   
 Runtime: 52 ms, faster than 95.15% of JavaScript online submissions for Unique Paths II.   
 Memory Usage: 35.6 MB, less than 100.00% of JavaScript online submissions for Unique Paths II.   
 - **优化思路**   
