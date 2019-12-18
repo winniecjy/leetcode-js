@@ -16,13 +16,11 @@
   ```
 
 - **第一思路**   
-动态规划，当前位置的最短路径 = MIN (上方的最短路径, 左侧的最短路径) + 当前位置消费。时间复杂度O(n^2)，空间复杂度O(n)。   
-Runtime: 52 ms, faster than 95.15% of JavaScript online submissions for Unique Paths II.   
-Memory Usage: 35.6 MB, less than 100.00% of JavaScript online submissions for Unique Paths II.   
+动态规划，当前位置的最短路径 = MIN (上方的最短路径, 左侧的最短路径) + 当前位置消费。时间复杂度O(n^2)，空间复杂度O(n)。使用0063高票答案的控件优化思路，dp数组记录的是上一行的dp结果，所以当前行的数据dp[i] = MIN(dp[i], dp[i-1]) + 当前位置消费。    
+Runtime: 56 ms, faster than 86.19% of JavaScript online submissions for Minimum Path Sum.    
+Memory Usage: 35.4 MB, less than 100.00% of JavaScript online submissions for Minimum Path Sum.   
 - **优化思路**   
 无  
 - **高票答案对比**   
-高票思路：https://leetcode.com/problems/unique-paths-ii/discuss/23250/Short-JAVA-solution   
-同第一思路。第一思路使用的是二维数组记录，高票答案作者使用的是一维数据。dp数组记录的是上一行的dp结果，所以当前行的数据dp[i] = dp[i] + dp[i-1] = 上方位置的数量 + 左侧位置的数量。时间复杂度O(n^2)，空间复杂度O(n)。    
-Runtime: 56 ms, faster than 85.44% of JavaScript online submissions for Unique Paths II.   
-Memory Usage: 35.1 MB, less than 100.00% of JavaScript online submissions for Unique Paths II.    
+高票思路：https://leetcode.com/problems/minimum-path-sum/discuss/23457/C%2B%2B-DP    
+同第一思路。      
