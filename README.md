@@ -71,3 +71,5 @@ https://leetcode.com/problemset/algorithms/
 0061 | Permutation Sequence | [题解](https://github.com/jinglecjy/leetcode-js/blob/master/analysis/0061RotateList.md) | [实现](https://github.com/jinglecjy/leetcode-js/blob/master/src/0061RotateList.js) | 链表 | 2019/12/16
 0062 | Unique Paths | [题解](https://github.com/jinglecjy/leetcode-js/blob/master/analysis/0062UniquePaths.md) | [实现](https://github.com/jinglecjy/leetcode-js/blob/master/src/0062UniquePaths.js) | DP，数学（Pascal矩阵） | 2019/12/17
 0063 | Unique Paths II | [题解](https://github.com/jinglecjy/leetcode-js/blob/master/analysis/0063UniquePathsII.md) | [实现](https://github.com/jinglecjy/leetcode-js/blob/master/src/0063UniquePathsII.js) | DP | 2019/12/18
+0064 | Minimum Path Sum | [题解](https://github.com/jinglecjy/leetcode-js/blob/master/analysis/0064MinimumPathSum.md) | [实现](https://github.com/jinglecjy/leetcode-js/blob/master/src/0064MinimumPathSum.js) | DP | 2019/12/19
+0065 | Valid Number | [题解](https://github.com/jinglecjy/leetcode-js/blob/master/analysis/0065ValidNumber.md) | [实现](https://github.com/jinglecjy/leetcode-js/blob/master/src/0065ValidNumber.js) | 正则 | 2019/12/20
