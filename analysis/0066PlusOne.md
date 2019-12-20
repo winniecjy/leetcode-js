@@ -17,9 +17,9 @@
   ```
 
 - **第一思路**   
-水题，给数组的最末位置加1，需要考虑一个特殊情况999，需要连续进位而且需要改变数组长度，时间复杂度O(n)。   
-Runtime: 80 ms, faster than 84.15% of JavaScript online submissions for Valid Number.   
-Memory Usage: 36.2 MB, less than 100.00% of JavaScript online submissions for Valid Number.   
+水题，给数组的最末位置加1，需要考虑特殊情况999和9，需要连续进位而且需要改变数组长度，时间复杂度O(n)。   
+Runtime: 60 ms, faster than 36.82% of JavaScript online submissions for Plus One.   
+Memory Usage: 33.8 MB, less than 51.06% of JavaScript online submissions for Plus One.   
 - **优化思路**   
 无  
 - **高票答案对比**   
