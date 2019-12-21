@@ -76,4 +76,5 @@ https://leetcode.com/problemset/algorithms/
 0066 | Plus One | [题解](https://github.com/jinglecjy/leetcode-js/blob/master/analysis/0066PlusOne.md) | [实现](https://github.com/jinglecjy/leetcode-js/blob/master/src/0066PlusOne.js) | 循环 | 2019/12/21
 0067 | Add Binary | [题解](https://github.com/jinglecjy/leetcode-js/blob/master/analysis/0067AddBinary.md) | [实现](https://github.com/jinglecjy/leetcode-js/blob/master/src/0067AddBinary.js) | 进制相加 | 2019/12/22
 0068 | Text Justification | [题解](https://github.com/jinglecjy/leetcode-js/blob/master/analysis/0068TextJustification.md) | [实现](https://github.com/jinglecjy/leetcode-js/blob/master/src/0068TextJustification.js) | 分情况讨论 | 2019/12/23
-0069 | Sqrt(x) | [题解](https://github.com/jinglecjy/leetcode-js/blob/master/analysis/0069Sqrt(x).md) | [实现](https://github.com/jinglecjy/leetcode-js/blob/master/src/0069Sqrt(x).js) | 二分查找 | 2019/12/24
+0069 | Sqrt(x) | [题解](https://github.com/jinglecjy/leetcode-js/blob/master/analysis/0069Sqrtx.md) | [实现](https://github.com/jinglecjy/leetcode-js/blob/master/src/0069Sqrtx.js) | 二分查找 | 2019/12/24
+0070 | Climbing Stairs | [题解](https://github.com/jinglecjy/leetcode-js/blob/master/analysis/0070ClimbingStairs.md) | [实现](https://github.com/jinglecjy/leetcode-js/blob/master/src/0070ClimbingStairs.js) | 动态规划，fibonacci | 2019/12/25
