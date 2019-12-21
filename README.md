@@ -73,3 +73,4 @@ https://leetcode.com/problemset/algorithms/
 0063 | Unique Paths II | [题解](https://github.com/jinglecjy/leetcode-js/blob/master/analysis/0063UniquePathsII.md) | [实现](https://github.com/jinglecjy/leetcode-js/blob/master/src/0063UniquePathsII.js) | DP | 2019/12/18
 0064 | Minimum Path Sum | [题解](https://github.com/jinglecjy/leetcode-js/blob/master/analysis/0064MinimumPathSum.md) | [实现](https://github.com/jinglecjy/leetcode-js/blob/master/src/0064MinimumPathSum.js) | DP | 2019/12/19
 0065 | Valid Number | [题解](https://github.com/jinglecjy/leetcode-js/blob/master/analysis/0065ValidNumber.md) | [实现](https://github.com/jinglecjy/leetcode-js/blob/master/src/0065ValidNumber.js) | 正则 | 2019/12/20
+0066 | Plus One | [题解](https://github.com/jinglecjy/leetcode-js/blob/master/analysis/0066PlusOne.md) | [实现](https://github.com/jinglecjy/leetcode-js/blob/master/src/0066PlusOne.js) | 循环 | 2019/12/21
