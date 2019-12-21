@@ -74,3 +74,5 @@ https://leetcode.com/problemset/algorithms/
 0064 | Minimum Path Sum | [题解](https://github.com/jinglecjy/leetcode-js/blob/master/analysis/0064MinimumPathSum.md) | [实现](https://github.com/jinglecjy/leetcode-js/blob/master/src/0064MinimumPathSum.js) | DP | 2019/12/19
 0065 | Valid Number | [题解](https://github.com/jinglecjy/leetcode-js/blob/master/analysis/0065ValidNumber.md) | [实现](https://github.com/jinglecjy/leetcode-js/blob/master/src/0065ValidNumber.js) | 正则 | 2019/12/20
 0066 | Plus One | [题解](https://github.com/jinglecjy/leetcode-js/blob/master/analysis/0066PlusOne.md) | [实现](https://github.com/jinglecjy/leetcode-js/blob/master/src/0066PlusOne.js) | 循环 | 2019/12/21
+0067 | Add Binary | [题解](https://github.com/jinglecjy/leetcode-js/blob/master/analysis/0067AddBinary.md) | [实现](https://github.com/jinglecjy/leetcode-js/blob/master/src/0067AddBinary.js) | 进制相加 | 2019/12/22
+0068 | Text Justification | [题解](https://github.com/jinglecjy/leetcode-js/blob/master/analysis/0068TextJustification.md) | [实现](https://github.com/jinglecjy/leetcode-js/blob/master/src/0068TextJustification.js) | 分情况讨论 | 2019/12/23
