@@ -78,3 +78,4 @@ https://leetcode.com/problemset/algorithms/
 0068 | Text Justification | [题解](https://github.com/jinglecjy/leetcode-js/blob/master/analysis/0068TextJustification.md) | [实现](https://github.com/jinglecjy/leetcode-js/blob/master/src/0068TextJustification.js) | 分情况讨论 | 2019/12/23
 0069 | Sqrt(x) | [题解](https://github.com/jinglecjy/leetcode-js/blob/master/analysis/0069Sqrtx.md) | [实现](https://github.com/jinglecjy/leetcode-js/blob/master/src/0069Sqrtx.js) | 二分查找 | 2019/12/24
 0070 | Climbing Stairs | [题解](https://github.com/jinglecjy/leetcode-js/blob/master/analysis/0070ClimbingStairs.md) | [实现](https://github.com/jinglecjy/leetcode-js/blob/master/src/0070ClimbingStairs.js) | 动态规划，fibonacci | 2019/12/25
+0071 | Simplify Path | [题解](https://github.com/jinglecjy/leetcode-js/blob/master/analysis/0071SimplifyPath.md) | [实现](https://github.com/jinglecjy/leetcode-js/blob/master/src/0071SimplifyPath.js) | 栈，数组 | 2020/03/04
