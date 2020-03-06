@@ -42,11 +42,35 @@ Runtime: 80 ms, faster than 85.59% of JavaScript online submissions for Edit Dis
 Memory Usage: 41.3 MB, less than 50.00% of JavaScript online submissions for Edit Distance.   
 
 - **优化思路**   
-可以发现空间复杂度比较不理想，因为第一思路新开了一个数组来存储每一个层的数据，然后进行处理。实际上这是一个数组从左到右的累加处理，可以用`reduce`函数进行处理。       
-Runtime: 56 ms, faster than 94.91% of JavaScript online submissions for Simplify Path.   
-Memory Usage: 35.2 MB, less than 100.00% of JavaScript online submissions for Simplify Path.   
+无。   
 - **高票答案对比**   
-高票思路：https://leetcode.com/problems/simplify-path/discuss/25686/Java-10-lines-solution-with-stack   
-高票作者使用栈来处理，这是一个符合底层逻辑的思路，对于普通文件路径压入栈中，对于`.`不处理，对于`..`弹出栈顶元素。     
+高票思路：https://leetcode.com/problems/edit-distance/discuss/25846/C%2B%2B-O(n)-space-DP   
+高票作者给出了空间优化方案，当更新`dp[i][j]`时，只需要`dp[i-1][j-1]`、`dp[i-1][j]`、`dp[i][j-1]`，节省dp数组空间，降低为一维。   
+
 Runtime: 56 ms, faster than 94.91% of JavaScript online submissions for Simplify Path.   
-Memory Usage: 35.6 MB, less than 66.67% of JavaScript online submissions for Simplify Path.   
+Memory Usage: 35.6 MB, less than 66.67% of JavaScript online submissions for Simplify Path.     
+/**
+ * @param {string} word1
+ * @param {string} word2
+ * @return {number}
+ */
+var minDistance = function(word1, word2) {
+  let prevLine = []
+  for (let i=0; i<=word1.length; i++) {
+    prevLine[i] = i
+  }
+  for (let i=1; i<=word1.length; i++) {
+    let prev
+    for (let j=1; j<=word2.length; j++) {
+      if (word1[i-1] === word2[j-1]) {
+        dp[i][j] = dp[0][0]
+      } else {
+        dp[i][j] = Math.min(dp[0][0], dp[1][0], dp[0][1])+1
+      }
+    }
+  }
+  return dp[word1.length][word2.length]
+};
+
+
+minDistance('intention', 'execution')
