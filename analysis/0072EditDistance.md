@@ -27,13 +27,20 @@
   ```
 
 - **第一思路**   
-模拟人处理的方式，将字符串分割为每一层，从左到右对于每一层进行处理：      
-  - 对于`.`可以直接移除当前层
-  - 对于`..`则去除当前层及上一层
-  - 对于末尾`/`直接去除      
+动态规划实现，每一次动态规划算法的思路其实都是模式化的。   
+  - 首先考虑`dp[i][0]`和`dp[0][j]`的赋值情况：   
+  对于`dp[i][0]`，是将word1转换为空字符串''，操作数等于word1长度，即`dp[i][0] = i`；   
+  对于`dp[0][j]`，是将空字符串''转换为word2，操作数等于word2长度，即`dp[0][j] = j`；   
+  - 考虑`dp[i][j]`情况（表示word1(0,...,i-1)转化到word2(0,...,j-1)需要几步）：   
+  假如`word1[i-1] === word2[j-1]`，则不用操作，`dp[i][j] = dp[i-1][j-1]`；   
+  假如`word1[i-1] !== word2[j-1]`，有三种操作可选：    
+  插入：`dp[i][j] = dp[i][j-1] + 1`   
+  删除：`dp[i][j] = dp[i-1][j] + 1`       
+  替换：`dp[i][j] = dp[i-1][j-1] + 1`     
+  取最小值为所求。   
+Runtime: 80 ms, faster than 85.59% of JavaScript online submissions for Edit Distance.   
+Memory Usage: 41.3 MB, less than 50.00% of JavaScript online submissions for Edit Distance.   
 
-  Runtime: 56 ms, faster than 94.91% of JavaScript online submissions for Simplify Path.   
-  Memory Usage: 36.1 MB, less than 33.33% of JavaScript online submissions for Simplify Path.   
 - **优化思路**   
 可以发现空间复杂度比较不理想，因为第一思路新开了一个数组来存储每一个层的数据，然后进行处理。实际上这是一个数组从左到右的累加处理，可以用`reduce`函数进行处理。       
 Runtime: 56 ms, faster than 94.91% of JavaScript online submissions for Simplify Path.   
