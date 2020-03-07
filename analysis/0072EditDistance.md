@@ -2,10 +2,12 @@
 - **题干**   
 输入两个单词word1和word2，找出将word1转换为word2的最小操作数。   
 有以下三个操作可以执行：   
-1. 插入一个字符
-2. 删除一个字符
-3. 替换一个字符
-  示例：    
+  1. 插入一个字符
+  2. 删除一个字符
+  3. 替换一个字符    
+  
+  示例：      
+  
   ```JavaScript
   // e.g.1
   Input: word1 = "horse", word2 = "ros"
@@ -27,7 +29,7 @@
   ```
 
 - **第一思路**   
-动态规划实现，每一次动态规划算法的思路其实都是模式化的。   
+  动态规划实现，每一次动态规划算法的思路其实都是模式化的。   
   - 首先考虑`dp[i][0]`和`dp[0][j]`的赋值情况：   
   对于`dp[i][0]`，是将word1转换为空字符串''，操作数等于word1长度，即`dp[i][0] = i`；   
   对于`dp[0][j]`，是将空字符串''转换为word2，操作数等于word2长度，即`dp[0][j] = j`；   
@@ -38,39 +40,14 @@
   删除：`dp[i][j] = dp[i-1][j] + 1`       
   替换：`dp[i][j] = dp[i-1][j-1] + 1`     
   取最小值为所求。   
-Runtime: 80 ms, faster than 85.59% of JavaScript online submissions for Edit Distance.   
-Memory Usage: 41.3 MB, less than 50.00% of JavaScript online submissions for Edit Distance.   
+  Runtime: 80 ms, faster than 85.59% of JavaScript online submissions for Edit Distance.   
+  Memory Usage: 41.3 MB, less than 50.00% of JavaScript online submissions for Edit Distance.   
 
 - **优化思路**   
-无。   
+  无。   
 - **高票答案对比**   
-高票思路：https://leetcode.com/problems/edit-distance/discuss/25846/C%2B%2B-O(n)-space-DP   
-高票作者给出了空间优化方案，当更新`dp[i][j]`时，只需要`dp[i-1][j-1]`、`dp[i-1][j]`、`dp[i][j-1]`，节省dp数组空间，降低为一维。   
+  高票思路：https://leetcode.com/problems/edit-distance/discuss/25846/C%2B%2B-O(n)-space-DP   
+  高票作者给出了空间优化方案，当更新`dp[i][j]`时，只需要`dp[i-1][j-1]`、`dp[i-1][j]`、`dp[i][j-1]`，节省dp数组空间，降低为一维。   
 
-Runtime: 56 ms, faster than 94.91% of JavaScript online submissions for Simplify Path.   
-Memory Usage: 35.6 MB, less than 66.67% of JavaScript online submissions for Simplify Path.     
-/**
- * @param {string} word1
- * @param {string} word2
- * @return {number}
- */
-var minDistance = function(word1, word2) {
-  let prevLine = []
-  for (let i=0; i<=word1.length; i++) {
-    prevLine[i] = i
-  }
-  for (let i=1; i<=word1.length; i++) {
-    let prev
-    for (let j=1; j<=word2.length; j++) {
-      if (word1[i-1] === word2[j-1]) {
-        dp[i][j] = dp[0][0]
-      } else {
-        dp[i][j] = Math.min(dp[0][0], dp[1][0], dp[0][1])+1
-      }
-    }
-  }
-  return dp[word1.length][word2.length]
-};
-
-
-minDistance('intention', 'execution')
+  Runtime: 80 ms, faster than 84.94% of JavaScript online submissions for Edit Distance.   
+  Memory Usage: 36.5 MB, less than 100.00% of JavaScript online submissions for Edit Distance.   
