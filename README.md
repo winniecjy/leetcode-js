@@ -81,3 +81,4 @@ https://leetcode.com/problemset/algorithms/
 0071 | Simplify Path | [题解](https://github.com/jinglecjy/leetcode-js/blob/master/analysis/0071SimplifyPath.md) | [实现](https://github.com/jinglecjy/leetcode-js/blob/master/src/0071SimplifyPath.js) | 栈，数组 | 2020/03/04
 0072 | Edit Distance | [题解](https://github.com/jinglecjy/leetcode-js/blob/master/analysis/0072EditDistance.md) | [实现](https://github.com/jinglecjy/leetcode-js/blob/master/src/0072EditDistance.js) | DP | 2020/03/06
 0073 | Set Matrix Zeroes | [题解](https://github.com/jinglecjy/leetcode-js/blob/master/analysis/0073SetMatrixZeroes.md) | [实现](https://github.com/jinglecjy/leetcode-js/blob/master/src/0073SetMatrixZeroes.js) | 数组 | 2020/03/07
+0074 | Search a 2D Matrix | [题解](https://github.com/jinglecjy/leetcode-js/blob/master/analysis/0074SearchA2DMatrix.md) | [实现](https://github.com/jinglecjy/leetcode-js/blob/master/src/0074SearchA2DMatrix.js) | 二分查找 | 2020/03/08
